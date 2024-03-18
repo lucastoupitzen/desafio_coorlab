@@ -21,3 +21,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# ignoring cache and venv
+**/__pycache__
+.pytest cache
+.env
+venv
