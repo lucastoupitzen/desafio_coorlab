@@ -12,3 +12,17 @@ class Transport():
         self.duration = duration
         self.seat = seat
         self.bed = bed
+
+    def to_dict(self):
+            
+        return {
+            "id": self.id,
+            "name": self.name,
+            "price_confort": self.price_confort,
+            "price_econ": self.price_econ,
+            "city": self.city,
+            "duration": self.duration,
+            "seat": self.seat,
+            "bed": self.bed
+        }
+    

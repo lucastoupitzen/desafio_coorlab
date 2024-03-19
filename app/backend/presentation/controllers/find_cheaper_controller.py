@@ -19,7 +19,7 @@ class FindCheaperController(ControllerInterface):
             return HttpResponse (
                     status_code= 200,
                     body= {
-                        "data": response
+                        "data": response.to_dict()
                     }
                 )
         

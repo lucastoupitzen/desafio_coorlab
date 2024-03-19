@@ -14,7 +14,7 @@ class FindConfort(FindConfortInterface):
 
         if transports_city:
             cheapest = min(transports_city, key=lambda x: 
-                           float(x['price_confort'].replace('R$', '').strip()))
+                           float(x.price_confort.replace('R$', '').strip()))
             return cheapest
         
         return None
