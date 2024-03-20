@@ -7,3 +7,7 @@ pip3 install pylint
 pip3 install pre-commit
 pre-commit install 
 pip3 install Flask
+pip install flask-cors
+
+npm install nodejs
+npm install axios
