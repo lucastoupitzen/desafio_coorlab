@@ -8,7 +8,8 @@
             
             <!-- navigation menu -->
             <ul class="nav flex-column">
-                <li class="nav-item">
+                <li class="nav-item calculator">
+                  <i class="bi bi-calculator-fill"></i>
                     <a class="nav-link menu-option" href="#">Calculadora de Viagem</a>
                 </li>
             </ul>
@@ -27,8 +28,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .sidebar {
-      background-color: black;
-      width: 20dvw;
+      background-color: #2a3a59;
+      width: 22dvw;
       height: 100dvh;
       padding: 1dvw;
     }
@@ -41,5 +42,15 @@ export default {
     }
     .menu-option {
       color: white;
+      padding-left: 6px
+    }
+    .calculator {
+      display: flex;
+      align-items: center;
+
+    }
+    .bi-calculator-fill {
+      color: white;
+      font-size: 1.1em;
     }
 </style>

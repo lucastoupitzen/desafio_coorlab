@@ -1,71 +1,79 @@
 <template>
     <div class="main-container">
-        <div class="header">
-            <h3>Calculadora de Viagem</h3>
-        </div>
-        <div class="content">
-            <FormCalculator v-on:transport-finded="changeResponse" />
-            <ResponseContainer  class="response"/>
-        </div>
+      <div class="header custom-bg-color text-white p-2 ">
+        <i class="bi bi-truck text-white"></i>
+        <h3 class="m-0 title">Calculadora de Viagem</h3>
+      </div>
+      <div class="content p-4">
+        <div class="form-calculator">
+        <FormCalculator @transport-finded="changeResponse" />
+      </div>
+      <div class="response-container">
+        <ResponseContainer class="response" />
+      </div>
+      </div>
     </div>
-</template>
+  </template>
   
   <script>
-
   import FormCalculator from './FormCalculator.vue';
-  import ResponseContainer from './ResponseContainer.vue'
-
+  import ResponseContainer from './ResponseContainer.vue';
+  
   export default {
     name: 'MainContainer',
     props: {
       msg: String
     },
     components: {
-        FormCalculator,
-        ResponseContainer
+      FormCalculator,
+      ResponseContainer
     },
-    methods: {
-       changeResponse(response) {
-            console.log("Nosso teste")
-            console.log(response)
-       } 
-    },
-  }
+  };
   </script>
   
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-      .main-container {
-            height: 80dvh; /* Definir altura total da viewport */
-            width: 75dvw;
-            display: flex;
-            flex-direction: column;
-            border-radius: 5px;
-            margin: 5dvh;
-        }
+  .main-container {
+    height: 80vh; /* Definir altura total da viewport */
+    width: 75vw;
+    border-radius: 5px;
+    margin: 5vh;
+    margin-bottom: 0;
+    position: relative;
+  }
+  
+  .header{
+    
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
 
-        .header {
-            background-color: black;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            color: white;
-            padding: 10px 20px;
-            flex: 0 0 5%; /* 20% da altura total */
-        }
+  .custom-bg-color{
+    background-color:#2a3a59;
+  }
+  
+  .header h3 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .content {
+    display: grid; /* Define o content como um grid container */
+    grid-template-columns: 40% 60%; /* Divide o content em duas colunas com proporções de 40% e 60% */
+    align-items: center;
+}
+  .form-calculator {
+  padding-right: 10px; /* Adiciona um espaçamento à direita para separar o FormCalculator do ResponseContainer */
+}
 
-        .header h3 {
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        .content {
-            background-color: white;
-            flex: 1; /* O restante da altura total */
-            padding: 20px;
-            display: flex;
-            flex-direction: row;
-            align-items: top;
-            justify-content: space-around;
-        }
+.response-container {
+  padding-left: 10px; /* Adiciona um espaçamento à esquerda para separar o ResponseContainer do FormCalculator */
+}
+  .bi-truck {
+    font-size: 1.5rem;
+    margin-right: 1dvw;
+    margin-left: 2dvw;
+  }
 
   </style>

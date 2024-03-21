@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="icon-area">
-        <i class="fas fa-icon"></i>
+        <i :class="iconClass"></i>
       </div>
       <div class="info-area">
         <div class="col">
@@ -36,8 +36,15 @@
       campo1: String,
       campo2: String,
       campo3: String,
-      campo4: String
+      campo4: String,
+      icon: String
+    },
+    computed: {
+    // Calcula a classe do ícone com base no nome recebido como propriedade
+    iconClass() {
+      return `bi bi-${this.icon}`;
     }
+  },
   }
   </script>
   
@@ -49,7 +56,7 @@
   .icon-area {
     width: 80px;
     height: 80px;
-    background-color: lightskyblue;
+    background-color: #04a8b5;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     display: flex;
@@ -82,6 +89,11 @@
   .row p{
     padding: 0;
     margin: 0;
+  }
+  .bi {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
   }
   </style>
   

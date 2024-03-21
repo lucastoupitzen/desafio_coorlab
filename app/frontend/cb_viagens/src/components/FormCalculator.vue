@@ -3,7 +3,10 @@
     <div class="container">
         
             <div>
-                <h2 class="form-title">Calcule o Valor da Viagem</h2>
+                <div class="title">
+                    <i class="bi bi-cash-coin"></i>
+                    <h2 class="form-title">Calcule o Valor da Viagem</h2>
+                </div>
                 <form @submit.prevent="sendForm">
                     <div class="mb-3">
                         <label for="selectOption" class="form-label label">Destino:</label>
@@ -16,7 +19,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="dateInput" class="form-label label">Data:</label>
-                        <input type="date" class="form-control" id="dateInput" placeholder="Selecione uma data">
+                        <input type="text" class="form-control" id="dateInput" placeholder="Selecione uma data" onfocus="this.type='date'" onblur="this.type='text'" >
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary btn-enviar">Enviar</button>
@@ -79,13 +82,17 @@ export default {
     .container {
         width: fit-content;
         height: fit-content;
-        padding: 25px;
+        padding: 3dvw;
+        padding-bottom: 10dvh;
         display: flex;
+        background-color: rgba(211, 211, 211, 0.554);
+        border-radius: 10px;
     }
 
     .form-title {
         color: rgb(68, 68, 68);
-        font-size: 1em;
+        font-size: 1.2em;
+        margin-left: 1dvw;
     }
                                          
     .btn-enviar {
@@ -93,7 +100,9 @@ export default {
         margin: auto;
         font-size: .8em;
         font-weight: bold;
-        color: black
+        color: black;
+        background-color: #04a8b5;
+        border: none;
     }
 
     .label {
@@ -102,5 +111,14 @@ export default {
         font-weight: bold;
     }
 
-
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .bi-cash-coin {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+   
 </style>
