@@ -29,6 +29,8 @@
 
 <script>
 import axios from 'axios'
+import store from '../store'    
+
 
 export default {
   name: 'FormCalculator',
@@ -48,23 +50,26 @@ export default {
       // Envia a requisição GET para o backend
       axios.get(`http://localhost:3000/transport/cheaper?city=${destino}`)
         .then(response => {  
-          console.log(response.data);
-          // Faça algo com a resposta do backend, se necessário
+            // Chama a mutation para alterar showInfo para true
+            store.commit("setCheaperInfo", response)
+            // Faça algo com a resposta do backend, se necessário
+            axios.get(`http://localhost:3000/transport/confort?city=${destino}`)
+                .then(response2 => {
+                    store.commit("setConfortInfo", response2)
+                    store.commit("setShowInfo")
+                // Faça algo com a resposta do backend, se necessário
+                })
+                .catch(error => {
+                    console.error(error);
+                // Trate erros, se houver algum
+                });
         })
         .catch(error => {
           console.error(error);
           // Trate erros, se houver algum
         });
 
-      axios.get(`http://localhost:3000/transport/confort?city=${destino}`)
-        .then(response => {
-          console.log(response.data);
-          // Faça algo com a resposta do backend, se necessário
-        })
-        .catch(error => {
-          console.error(error);
-          // Trate erros, se houver algum
-        });
+     
     }
   }
 }
@@ -80,12 +85,15 @@ export default {
 
     .form-title {
         color: rgb(68, 68, 68);
-        font-size: 1em 
+        font-size: 1em;
     }
                                          
     .btn-enviar {
-        width: 50%;
+        width: 80%;
         margin: auto;
+        font-size: .8em;
+        font-weight: bold;
+        color: black
     }
 
     .label {

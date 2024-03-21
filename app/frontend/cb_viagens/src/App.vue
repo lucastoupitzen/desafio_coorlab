@@ -9,6 +9,7 @@
 </template>
 
 <script>
+
 import SideBar from './components/SideBar.vue';
 import MainHeader from './components/MainHeader.vue';
 import MainContainer from './components/MainContainer.vue';

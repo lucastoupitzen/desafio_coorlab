@@ -4,8 +4,8 @@
             <h3>Calculadora de Viagem</h3>
         </div>
         <div class="content">
-            <FormCalculator />
-            <ResponseContainer class="response"/>
+            <FormCalculator v-on:transport-finded="changeResponse" />
+            <ResponseContainer  class="response"/>
         </div>
     </div>
 </template>
@@ -23,6 +23,12 @@
     components: {
         FormCalculator,
         ResponseContainer
+    },
+    methods: {
+       changeResponse(response) {
+            console.log("Nosso teste")
+            console.log(response)
+       } 
     },
   }
   </script>
@@ -58,7 +64,7 @@
             padding: 20px;
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: top;
             justify-content: space-around;
         }
 
