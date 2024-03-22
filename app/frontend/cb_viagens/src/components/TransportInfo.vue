@@ -66,7 +66,7 @@
   .info-area {
     width: 240px;
     height: 80px;
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211, 0.554);
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     display: flex;
@@ -77,7 +77,7 @@
     margin-left: 20px;
     width: 150px;
     height: 80px;
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211, 0.554);
     border-radius: 5px;
     display: flex;
     justify-content: center;
