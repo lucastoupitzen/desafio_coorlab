@@ -9,17 +9,12 @@
                 </div>
                 <form @submit.prevent="sendForm">
                     <div class="mb-3">
-                        <label for="selectOption" class="form-label label">Destino:</label>
-                        <select class="form-select" id="destinselected" placeholder="Selecione o destino">
-                            <option value="" disabled selected hidden>Selecione o destino</option>
-                            <option value="Campinas">Campinas</option>
-                            <option value="Belo Horizonte">Belo Horizonte</option>
-                            <option value="São Paulo">São Paulo</option>
-                        </select>
+                        <label for="selectOption" class="form-label label">Destino</label>
+                        <CitySelector id="destinselected"/>
                     </div>
                     <div class="mb-3">
-                        <label for="dateInput" class="form-label label">Data:</label>
-                        <input type="text" class="form-control" id="dateInput" placeholder="Selecione uma data" onfocus="this.type='date'" >
+                        <label for="dateInput" class="form-label label">Data</label>
+                        <input type="text" class="form-control date-input" id="dateInput" placeholder="Selecione uma data" onfocus="this.type='date'" >
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary btn-enviar">Buscar</button>
@@ -32,7 +27,8 @@
 
 <script>
 import axios from 'axios'
-import store from '../store'    
+import store from '../store'   
+import CitySelector from './CitySelector.vue' 
 
 
 export default {
@@ -40,9 +36,12 @@ export default {
   props: {
     msg: String
   },
+  components: {
+    CitySelector
+  },
   methods: {
     sendForm() {
-      const destino = document.getElementById('destinselected').value;
+      const destino = document.getElementById('destinselected').innerText;
       const data = document.getElementById('dateInput').value;
 
       // Verifique se os campos foram preenchidos antes de enviar a requisição
@@ -101,7 +100,7 @@ export default {
     .btn-enviar {
         width: 80%;
         margin: auto;
-        margin-top: 2dvh;
+        margin-top: 3.5dvh;
         font-size: .8em;
         font-weight: bold;
         color: black;
@@ -119,10 +118,15 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        margin-bottom: 8px;
     }
     .bi-cash-coin {
         font-size: 1.2em;
         font-weight: bold;
+    }
+
+    .date-input {
+        color: rgb(97, 96, 96);
     }
    
 </style>

@@ -31,7 +31,8 @@ export default {
       background-color: #2a3a59;
       width: 22dvw;
       height: 100dvh;
-      padding: 1dvw;
+      padding: 2dvw;
+      padding-top: 2dvw;
     }
     .logo {
       margin-bottom: 7dvh;

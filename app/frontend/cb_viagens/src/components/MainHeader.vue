@@ -17,7 +17,7 @@
   <style scoped>
       .empty-header{
         height: 13vh;
-        width: 100vw;
+        width: 100%;
         border-bottom: 3px solid rgba(128, 128, 128, 0.593);
       }
   </style>
