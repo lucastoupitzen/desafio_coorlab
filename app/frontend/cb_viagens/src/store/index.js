@@ -5,16 +5,26 @@ export default createStore ({
         showInfo: false,
         cheaperInfo: null,
         confortInfo: null,
+        showAlert: false,
     },
     mutations: {
-        setShowInfo(state) {
-            state.showInfo = !state.showInfo
+        setShowInfoTrue(state) {
+            state.showInfo = true
+        },
+        setShowInfoFalse(state) {
+            state.showInfo = false
         },
         setCheaperInfo(state, payload) {
             state.cheaperInfo = payload
         },
         setConfortInfo(state, payload) {
             state.confortInfo = payload
+        },
+        setShowAlertTrue(state) {
+            state.showAlert = true
+        },
+        setShowAlertFalse(state) {
+            state.showAlert = false
         }
     }
 })

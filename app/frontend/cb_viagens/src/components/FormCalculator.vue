@@ -19,10 +19,10 @@
                     </div>
                     <div class="mb-3">
                         <label for="dateInput" class="form-label label">Data:</label>
-                        <input type="text" class="form-control" id="dateInput" placeholder="Selecione uma data" onfocus="this.type='date'" onblur="this.type='text'" >
+                        <input type="text" class="form-control" id="dateInput" placeholder="Selecione uma data" onfocus="this.type='date'" >
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-enviar">Enviar</button>
+                        <button type="submit" class="btn btn-primary btn-enviar">Buscar</button>
                     </div>
                 </form>
             </div>
@@ -47,7 +47,7 @@ export default {
 
       // Verifique se os campos foram preenchidos antes de enviar a requisição
       if (!destino || !data) {
-        alert('Por favor, preencha todos os campos');
+        this.openModal();
         return;
       }
       // Envia a requisição GET para o backend
@@ -59,7 +59,7 @@ export default {
             axios.get(`http://localhost:3000/transport/confort?city=${destino}`)
                 .then(response2 => {
                     store.commit("setConfortInfo", response2)
-                    store.commit("setShowInfo")
+                    store.commit("setShowInfoTrue")
                 // Faça algo com a resposta do backend, se necessário
                 })
                 .catch(error => {
@@ -73,7 +73,10 @@ export default {
         });
 
      
-    }
+    },
+    openModal() {
+        store.commit("setShowAlertTrue")
+      },
   }
 }
 </script>
@@ -98,6 +101,7 @@ export default {
     .btn-enviar {
         width: 80%;
         margin: auto;
+        margin-top: 2dvh;
         font-size: .8em;
         font-weight: bold;
         color: black;

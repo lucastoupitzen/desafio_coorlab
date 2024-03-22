@@ -5,6 +5,7 @@
         <MainHeader />
         <MainContainer />
       </div>
+      <AlertMessage v-if="$store.state.showAlert"/>
     </body>
 </template>
 
@@ -13,7 +14,8 @@
 import SideBar from './components/SideBar.vue';
 import MainHeader from './components/MainHeader.vue';
 import MainContainer from './components/MainContainer.vue';
-
+import AlertMessage from './components/AlertMessage.vue'
+import store from './store'   
 
 export default {
   name: 'App',
@@ -21,7 +23,13 @@ export default {
     SideBar,
     MainHeader,
     MainContainer,
-  }
+    AlertMessage,
+  }, 
+  setup() {
+    return {
+      AlertMessage
+    }
+  },
 }
 </script>
 
@@ -31,8 +39,6 @@ export default {
     flex-direction: row;
   }
   .content-size {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
   }

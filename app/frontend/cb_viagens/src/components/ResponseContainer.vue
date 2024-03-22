@@ -20,7 +20,7 @@
             
                             </div>
                 <div class="d-flex justify-content-end mt-5">
-                    <button @click='$store.commit("setShowInfo")' type="submit" class="btn btn-primary btn-limpar">Limpar</button>
+                    <button @click='$store.commit("setShowInfoFalse")' type="submit" class="btn btn-primary btn-limpar">Limpar</button>
                 </div>
         </div>
         <div v-else>
