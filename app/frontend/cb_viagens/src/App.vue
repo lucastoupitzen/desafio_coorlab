@@ -14,8 +14,7 @@
 import SideBar from './components/SideBar.vue';
 import MainHeader from './components/MainHeader.vue';
 import MainContainer from './components/MainContainer.vue';
-import AlertMessage from './components/AlertMessage.vue'
-import store from './store'   
+import AlertMessage from './components/AlertMessage.vue' 
 
 export default {
   name: 'App',

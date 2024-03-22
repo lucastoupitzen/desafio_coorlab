@@ -1,13 +1,21 @@
 #!/bin/bash
 
-echo "Implemente aqui o script para executar a sua solução"
-python3 -m venv venv
-. venv/bin/activate
-pip3 install pylint
-pip3 install pre-commit
-pre-commit install 
-pip3 install Flask
+echo "Instalando as Bibliotecas"
+
+pip install Flask
 pip install flask-cors
 
+npm install
 npm install nodejs
 npm install axios
+
+echo "Iniciando servidor..."
+#garantindo que está na pasta app
+cd app
+python3 run.py &
+
+# Iniciar o Vue.js
+echo "Iniciando Vue.js..."
+cd frontend/cb_viagens
+npm install
+npm run serve
