@@ -8,27 +8,11 @@
         <ul class="options">
             <li class="option">
                 <i class="bi bi-circle-fill"></i>
-                <span class="option-text">Campinas</span>
-            </li>
-            <li class="option">
-                <i class="bi bi-circle-fill"></i>
-                <span class="option-text">São Paulo</span>
-            </li>
-            <li class="option">
-                <i class="bi bi-circle-fill"></i>
                 <span class="option-text">Belo Horizonte</span>
             </li>
             <li class="option">
                 <i class="bi bi-circle-fill"></i>
-                <span class="option-text">Rio de Janeiro</span>
-            </li>
-            <li class="option">
-                <i class="bi bi-circle-fill"></i>
-                <span class="option-text">Recife</span>
-            </li>
-            <li class="option">
-                <i class="bi bi-circle-fill"></i>
-                <span class="option-text">Fortaleza</span>
+                <span class="option-text">Campinas</span>
             </li>
             <li class="option">
                 <i class="bi bi-circle-fill"></i>
@@ -36,7 +20,31 @@
             </li>
             <li class="option">
                 <i class="bi bi-circle-fill"></i>
+                <span class="option-text">Fortaleza</span>
+            </li>
+            <li class="option">
+                <i class="bi bi-circle-fill"></i>
                 <span class="option-text">Manaus</span>
+            </li>
+            <li class="option">
+                <i class="bi bi-circle-fill"></i>
+                <span class="option-text">Natal</span>
+            </li>
+            <li class="option">
+                <i class="bi bi-circle-fill"></i>
+                <span class="option-text">Recife</span>
+            </li>
+            <li class="option">
+                <i class="bi bi-circle-fill"></i>
+                <span class="option-text">Rio de Janeiro</span>
+            </li>
+            <li class="option">
+                <i class="bi bi-circle-fill"></i>
+                <span class="option-text">Salvador</span>
+            </li>
+            <li class="option">
+                <i class="bi bi-circle-fill"></i>
+                <span class="option-text">São Paulo</span>
             </li>
         </ul>
     </div>

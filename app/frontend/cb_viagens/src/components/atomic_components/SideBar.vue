@@ -3,7 +3,7 @@
   <nav class="sidebar">
             <!-- Logo -->
             <div class="logo">
-                <img src="../../../../../doc/logo.png" alt="Logo CB viagens">
+                <img src="../../../../../../doc/logo.png" alt="Logo CB viagens">
             </div>
             
             <!-- navigation menu -->

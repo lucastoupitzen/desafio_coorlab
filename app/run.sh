@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Instalando as Bibliotecas"
+echo "Installing libraries"
 
 pip install Flask
 pip install flask-cors
@@ -9,13 +9,12 @@ npm install
 npm install nodejs
 npm install axios
 
-echo "Iniciando servidor..."
-#garantindo que está na pasta app
+echo "Starting server.."
+
 cd app
 python3 run.py &
 
-# Iniciar o Vue.js
-echo "Iniciando Vue.js..."
+echo "Starting Vue.js..."
 cd frontend/cb_viagens
 npm install
 npm run serve

@@ -11,10 +11,10 @@
 
 <script>
 
-import SideBar from './components/SideBar.vue';
-import MainHeader from './components/MainHeader.vue';
+import SideBar from './components/atomic_components/SideBar.vue';
+import MainHeader from './components/atomic_components/MainHeader.vue';
 import MainContainer from './components/MainContainer.vue';
-import AlertMessage from './components/AlertMessage.vue' 
+import AlertMessage from './components/atomic_components/AlertMessage.vue' 
 
 export default {
   name: 'App',

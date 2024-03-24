@@ -2,6 +2,7 @@ from ..infra.db.repositories.transport import TransportRepo
 from ..data.use_cases.find_confort import FindConfort
 from ..presentation.controllers.find_confort_controller import FindConfortController
 
+#composer of the serach for the more confortable trip
 def find_confort_composer():
 
     repository = TransportRepo()

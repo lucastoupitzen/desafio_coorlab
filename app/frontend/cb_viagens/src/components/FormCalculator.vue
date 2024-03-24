@@ -28,7 +28,7 @@
 <script>
 import axios from 'axios'
 import store from '../store'   
-import CitySelector from './CitySelector.vue' 
+import CitySelector from './atomic_components/CitySelector.vue' 
 
 
 export default {

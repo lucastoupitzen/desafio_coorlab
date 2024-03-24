@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import TransportInfo from './TransportInfo.vue'
+  import TransportInfo from './atomic_components/TransportInfo.vue'
  
   export default {
     name: 'ResponseContainer',
